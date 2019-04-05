@@ -16,7 +16,7 @@ bot = telebot.TeleBot(TOKEN) # Creamos el objeto de nuestro bot.
 
 commands = {  # command description used in the "help" command
 
-              'start': 'Arranca a este inteligente pingüino',
+              'start': 'Arranca a este bot',
               'help': 'Ayuda de este bot',
 			  'mencionar_todos': 'menciona a todos',
 
@@ -39,7 +39,7 @@ bot.set_update_listener(listener) # Así, le decimos al bot que utilice como fun
 @bot.message_handler(commands=['start'])
 def command_start(m):
 	cid = m.chat.id
-	bot.send_message(cid, "Arrancando Pingüeinstein...\n¡Buenas! ¿En qué puedo servirle?")
+	bot.send_message(cid, "Arrancando Mencionar_todos_bot")
 	command_help(m)
 
 ##HELP
