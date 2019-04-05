@@ -12,9 +12,7 @@ token_file = open("TOKEN.txt", "r") # "TOKEN.txt" tiene el token que Bot Father 
 TOKEN = token_file.readline()
 token_file.close()
 
-partidas = {}
-
-pole = AdminPole("polelog.txt")
+bot = telebot.TeleBot(TOKEN) # Creamos el objeto de nuestro bot.
 
 commands = {  # command description used in the "help" command
 
@@ -23,8 +21,6 @@ commands = {  # command description used in the "help" command
 			  'mencionar_todos': 'menciona a todos',
 
 }
-
-bot = telebot.TeleBot(TOKEN) # Creamos el objeto de nuestro bot.
 
 #############################################
 #Listener
@@ -36,7 +32,8 @@ def listener(messages): # Con esto, estamos definiendo una función llamada 'lis
 
 bot.set_update_listener(listener) # Así, le decimos al bot que utilice como función escuchadora nuestra función 'listener' declarada arriba.
 #############################################
-#Funciones
+
+##FUNCIONES
 
 ##START
 @bot.message_handler(commands=['start'])
