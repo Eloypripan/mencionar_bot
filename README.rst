@@ -32,7 +32,7 @@ From master branch:
      $ git clone https://github.com/Eloypripan/mencionar_bot/
      # To execute:
      $ cd mencionar_bot
-     $ phython3 mencionar_bot.py
+     $ pip3 mencionar_bot.py
 
 
 
