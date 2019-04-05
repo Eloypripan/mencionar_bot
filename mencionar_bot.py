@@ -6,6 +6,7 @@ from telebot import types # Tipos para la API del bot.
 import time # Librería para hacer que el programa que controla el bot no se acabe
 import logging
 import sympy
+import ast
 
 token_file = open("TOKEN.txt", "r") # "TOKEN.txt" tiene el token que Bot Father nos dio en la primera línea
 TOKEN = token_file.readline()
@@ -75,16 +76,57 @@ def send_mensaje(m):
     mensaje = text[i+1:]
 
     bot.send_message(cid, mensaje)
+	
+"""	
+##############################
+m.from_user.username
+m.from_user.username.first_name+"+"m.from_user.username.last_name
+
+class group_user:
+	def __init__(self, usuario
+		if (type(usuario).__name__ == 'User'):
+			self.user = usuario
+		elif (type(usuario).__name__ == 'TextIOWrapper'):
+			self.read(usuario)
+		elif (type(usuario).__name__ == 'dict'):
+			userdict = ast.literal_eval(usuario['user'])
+			self.user = types.User(userdict['id'], userdict['is_bot'],
+				userdict['first_name'], userdict['username'],
+				userdict['last_name'], userdict['language_code'])
+		else:
+			raise TypeError("Argumento 'usuario' es de un tipo no válido")	
+	
+	def add_group(self, cid, user):
+	    self.groups[cid] = Groupuser(user, cid)	
+	
+##Vector Usuarios
+#vector_user(numero id del grupo, alias)for j in self.players:
+def vector_user(cid, self):
+			for i in range(0, len(self.user)):
+				if (self.user[i].user.id == cid):
+					return i
+			return -1
+nombre = j.user.username
+	if (nombre == None):
+		nombre = j.user.first_name + ' ' + j.user.last_name
+	else:
+	nombre = '@' + nombre	
+					     
+
+"""	
 
 ##MENCIONAR
 @bot.message_handler(commands=['mencionar']) # Indicamos que lo siguiente va a controlar el comando '/chiste'
 def command_mencionar(m): # Definimos una función que resuleva lo que necesitemos.
-	cid = m.chat.id # Guardamos el ID de la conversación para poder responder.
-	bot.send_message(cid, "@eloypripan")
+    cid = m.chat.id # Guardamos el ID de la conversación para poder responder.
+    bot.send_message(cid, "@eloypripan")
+    #bot.send_message(cid, vector_user(cid, ))
+
 
 ##ALL
 @bot.message_handler(func=lambda message: message.content_type == "text" and "@all" in message.text.lower())
-def all:
+def all(m):
+    cid = m.chat.id
     bot.reply_to(m, "@eloypripan")
 
 ############################################
