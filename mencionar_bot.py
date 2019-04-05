@@ -79,6 +79,25 @@ def send_mensaje(m):
 m.from_user.username
 m.from_user.username.first_name+"+"m.from_user.username.last_name
 
+##Vector Usuarios
+#vector_user(numero id del grupo, alias)for j in self.players:
+def vector_user(cid, self):
+			for i in range(0, len(self.user)):
+				if (self.user[i].user.id == cid):
+					return i
+			return -1
+
+nombre = j.user.username
+	if (nombre == None):
+		nombre = j.user.first_name + ' ' + j.user.last_name
+	else:
+	nombre = '@' + nombre
+	
+vector_user(cid, j)=nombre
+	
+def add_group(self, cid, user):
+	    self.groups[cid] = Groupuser(user, cid)
+
 class group_user:
 	def __init__(self, usuario
 		if (type(usuario).__name__ == 'User'):
@@ -93,21 +112,7 @@ class group_user:
 		else:
 			raise TypeError("Argumento 'usuario' es de un tipo no válido")	
 	
-	def add_group(self, cid, user):
-	    self.groups[cid] = Groupuser(user, cid)	
 	
-##Vector Usuarios
-#vector_user(numero id del grupo, alias)for j in self.players:
-def vector_user(cid, self):
-			for i in range(0, len(self.user)):
-				if (self.user[i].user.id == cid):
-					return i
-			return -1
-nombre = j.user.username
-	if (nombre == None):
-		nombre = j.user.first_name + ' ' + j.user.last_name
-	else:
-	nombre = '@' + nombre	
 					     
 
 """	
