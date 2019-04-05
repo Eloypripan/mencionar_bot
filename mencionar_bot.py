@@ -80,12 +80,12 @@ def send_mensaje(m):
 @bot.message_handler(commands=['mencionar']) # Indicamos que lo siguiente va a controlar el comando '/chiste'
 def command_mencionar(m): # Definimos una función que resuleva lo que necesitemos.
 	cid = m.chat.id # Guardamos el ID de la conversación para poder responder.
-	bot.send_message( cid,)
+	bot.send_message(cid, "@eloypripan")
 
 ##ALL
 @bot.message_handler(func=lambda message: message.content_type == "text" and "@all" in message.text.lower())
 def all:
-    bot.reply_to(m, )
+    bot.reply_to(m, "@eloypripan")
 
 ############################################
 #Peticiones
