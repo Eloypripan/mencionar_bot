@@ -54,9 +54,9 @@ def command_help(m):
 
 ##STATUS
 @bot.message_handler(commands=['status'])
-def command_staus(m):
+def command_status(m):
     cid = m.chat.id
-    bot.send_message(cid, "Estoy 100% operativo")
+    bot.send_message(cid, "Estoy vivo y 99% operativo")
 
 ##MSG	
 @bot.message_handler(commands=['msg'])
