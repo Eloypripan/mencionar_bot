@@ -26,7 +26,7 @@ From master branch:
 
      $ sudo apt-get install python3-pip
      $ pip3 install pillow
-     $ pip3 install pyTellegramBotAPI
+     $ pip3 install pyTelegramBotAPI
      $ sudo apt get-install python3-sympy
      $ sudo apt install git
      $ git clone https://github.com/Eloypripan/mencionar_bot/
