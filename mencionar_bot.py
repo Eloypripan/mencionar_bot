@@ -88,12 +88,14 @@ def command_help(m):
     for key in commands:  # generate help text out of the commands dictionary defined at the top
         help_text += "/" + key + ": "
         help_text += commands[key] + "\n"
+    help_text += "\nfor support write to @eloypripan"
     bot.send_message(cid, help_text)  # send the generated help page
 ##STATUS
 @bot.message_handler(commands=['status'])
 def command_status(m):
     cid = m.chat.id
-    bot.send_message(cid, "Estoy vivo y 99% operativo")
+    uid = m.from_user.id
+    bot.send_message(uid, "Estoy vivo y 99% operativo")
 
 ##MSG	
 @bot.message_handler(commands=['msg'])
@@ -117,8 +119,8 @@ def command_id(m):
     cid = m.chat.id
     username = m.from_user.username
     uid = m.from_user.id
-    bot.send_message(uid, "You are: @" + str(username)+ " " + "And your Telegram ID is: " + str(uid))
-    bot.send_message(uid, "This group is: " + str(m.chat.title)+ " " + "And group Telegram ID is: " + str(cid))
+    bot.send_message(uid, "You are: @" + str(username)+ "\n" + "And your Telegram ID is: " + str(uid))
+    bot.send_message(uid, "Group is: " + str(m.chat.title)+ "\n" + "And group ID is: " + str(cid))
 
 
 ##MENCIONAR
