@@ -33,7 +33,7 @@ From master branch:
      
      # To execute:
      $ cd mencionar_bot
-     $ python3 mencionar_bot
+     $ python3 mencionar_bot.py
      
      # OR:
      $ python3 ~/mencionar_bot/mencionar_bot.py
