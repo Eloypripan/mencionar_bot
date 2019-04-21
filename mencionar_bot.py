@@ -173,4 +173,4 @@ while True:
 
             time.sleep(10)
 
-            print('Error en la conexión')
+            print("\n" + "\n" + 'Error en la conexión')
