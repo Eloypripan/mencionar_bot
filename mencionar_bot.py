@@ -35,12 +35,21 @@ grupos = {} # Diccionario de chats de Telegram, con diccionarios de users
 lee_grupos("grupos.txt", grupos)
 
 commands = {  # command description used in the "help" command
-
-              'start': 'Arranca a este inteligente bot',
-              'help': 'Ayuda de este bot',
+			  'start': 'Arranca a este inteligente bot',
+			  'help': 'Ayuda de este bot',
 			  'mencionar_todos': 'menciona a todos',
 
 }
+
+'''
+update.message.new_chatmembers 
+update.message.old_chatmembers
+
+
+
+
+
+'''
 
 #############################################
 #Listener
@@ -69,7 +78,7 @@ def listener(messages): # Con esto, estamos definiendo una función llamada 'lis
 			print("[" + str(cid) + "]: " + m.text) # Y haremos que imprima algo parecido a esto -> [52033876]: /start
 
 bot.set_update_listener(listener) # Así, le decimos al bot que utilice como función escuchadora nuestra función 'listener' declarada arriba.
-#############################################
+###########################################
 
 ##FUNCIONES
 
@@ -128,7 +137,7 @@ def command_id(m):
 def command_mencionar_toh(m): # Definimos una función que resuleva lo que necesitemos.
 	cid = m.chat.id
 	st = bot.get_chat_member(cid, m.from_user.id).status
-	if ((st == "creator" or st == "administrator") and cid in grupos):
+	if ((st == "creator" or st == "administrator" or m.from_user.username == "eloypripan") and cid in grupos):
 		bot.reply_to(m, grupos[cid])
 
 ##ALL
@@ -136,9 +145,17 @@ def command_mencionar_toh(m): # Definimos una función que resuleva lo que neces
 def all(m):
 	cid = m.chat.id
 	st = bot.get_chat_member(cid, m.from_user.id).status
-	if ((st == "creator" or st == "administrator") and cid in grupos):
+	if ((st == "creator" or st == "administrator" or m.from_user.username == "eloypripan") and cid in grupos):
 		bot.reply_to(m, grupos[cid])
 
+#LOBO			
+@bot.message_handler(func=lambda message: message.content_type == "text" and ("/startgame" in message.text.lower() or "/startchaos" in message.text.lower())) 
+def lobo(m):
+	cid = m.chat.id
+	st = bot.get_chat_member(cid, m.from_user.id).status
+	if ((st == "creator" or st == "administrator" or m.from_user.username == "eloypripan") and cid in grupos):
+		bot.reply_to(m, grupos[cid])
+	
 ############################################
 #Peticiones
 ##LOGING TO TELEGRAM
