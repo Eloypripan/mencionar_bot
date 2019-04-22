@@ -7,10 +7,11 @@ Este bot utiliza las siguientes APIs: sympy, pyTelegramBotAPI y pillow.
 
 Wercker:
 ------
-.. image:: https://app.wercker.com/status/89818c32abaffc5b14b662fd7cd09dea/m/master
-     : :target: https://app.wercker.com/project/byKey/89818c32abaffc5b14b662fd7cd09dea
-.. image:: https://app.wercker.com/status/89818c32abaffc5b14b662fd7cd09dea/s/master
-     :target: https://app.wercker.com/project/byKey/89818c32abaffc5b14b662fd7cd09dea
+.. image:: https://app.wercker.com/status/cbef8245821f6bac385c392b6f199ad2/m/master
+     : :target: https://app.wercker.com/project/byKey/cbef8245821f6bac385c392b6f199ad2
+.. image:: https://app.wercker.com/status/cbef8245821f6bac385c392b6f199ad2/s/master
+     : :target: https://app.wercker.com/project/byKey/cbef8245821f6bac385c392b6f199ad2
+
 
 Travis:
 -------
