@@ -40,7 +40,7 @@ build:
 #    - pip-install: pyTelegramBotAPI
 #    - pip-install: sympy
 #    - ls
-    - python mencionar_bot.py
+#    - python mencionar_bot.py
 
      # # This pip-install clears the local wheel cache
     # - pip-install:
