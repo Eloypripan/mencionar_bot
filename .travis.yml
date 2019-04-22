@@ -15,7 +15,7 @@ python:
   - pypy3
 
 install:
-  - pip install -e .\[dev\]
+  - pip install -e .\[master\]
 
 script:
   - nosetests --with-coverage
