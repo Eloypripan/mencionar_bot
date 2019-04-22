@@ -6,7 +6,7 @@
 # If you want Google's container you would reference google/python
 # Read more about containers on our dev center
 # https://devcenter.wercker.com/overview-and-core-concepts/containers/
-box: python:2.7
+box: python:3.2
 # You can also use services such as databases. Read more on our dev center:
 # https://devcenter.wercker.com/administration/services/
 # services:
@@ -26,14 +26,14 @@ build:
   # https://devcenter.wercker.com/development/steps/
   steps:
     # A step that sets up the python virtual environment
-    - virtualenv:
-        name: setup virtual environment
-        install_wheel: false # Enable wheel to speed up builds (experimental)
+#    - virtualenv:
+#        name: setup virtual environment
+#        install_wheel: false # Enable wheel to speed up builds (experimental)
 
-    # # Use this virtualenv step for python 3.2
-    # - virtualenv
-    #     name: setup virtual environment
-    #     python_location: /usr/bin/python3.2
+    # Use this virtualenv step for python 3.2
+     - virtualenv
+         name: setup virtual environment
+         python_location: /usr/bin/python3.2
 
     # A step that executes `pip install` command.
     - pip install pillow
