@@ -14,8 +14,8 @@ Wercker:
 
 Travis:
 -------
-.. image:: https://travis-ci.com/Eloypripan/pingueinstein.svg?token=D3svyCabosF1Xr6psvEq&branch=master
-    :target: https://travis-ci.com/Eloypripan/pingueinstein
+.. image:: https://travis-ci.com/Eloypripan/mencionar_bot.svg?token=D3svyCabosF1Xr6psvEq&branch=master
+    :target: https://travis-ci.com/Eloypripan/mencionar_bot
 
 
 Installation
