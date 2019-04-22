@@ -6,16 +6,10 @@ cache:
     - ~/.cache/pip
 
 python:
-  - 2.7
-  - 3.3
-  - 3.4
-  - 3.5
   - 3.6
-  - pypy
-  - pypy3
 
 install:
-  - pip install -e .\[master\]
+  - python3 mencionar_boy.py
 
 script:
   - nosetests --with-coverage
