@@ -10,8 +10,8 @@ python:
 
 install:
   - ls
-  - cd mencionar_boy
-  - python3 mencionar_boy.py
+  - cd mencionar_bot
+  - python3 mencionar_bot.py
 
 script:
   - nosetests --with-coverage
