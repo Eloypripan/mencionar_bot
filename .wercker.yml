@@ -36,9 +36,9 @@ build:
     #     python_location: /usr/bin/python3.2
 
     # A step that executes `pip install` command.
-    - pip-install: pillow
-    - pip-install: pyTelegramBotAPI
-    - pip-install: sympy
+    - pip-install pillow
+#    - pip-install: pyTelegramBotAPI
+#    - pip-install: sympy
     - ls
     - python mencionar_bot.py
 
