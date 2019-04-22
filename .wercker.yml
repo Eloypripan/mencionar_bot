@@ -37,8 +37,10 @@ build:
 
     # A step that executes `pip install` command.
     - pip-install
-#    - pip-install: pyTelegramBotAPI
-#    - pip-install: sympy
+## requirements.txt
+#    - pillow
+#    - pyTelegramBotAPI
+#    - sympy
 #    - ls
 #    - python mencionar_bot.py
 
