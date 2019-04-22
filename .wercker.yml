@@ -6,7 +6,7 @@
 # If you want Google's container you would reference google/python
 # Read more about containers on our dev center
 # https://devcenter.wercker.com/overview-and-core-concepts/containers/
-box: python:3.6
+box: python:2.7
 # You can also use services such as databases. Read more on our dev center:
 # https://devcenter.wercker.com/administration/services/
 # services:
@@ -36,9 +36,9 @@ build:
     #     python_location: /usr/bin/python3.2
 
     # A step that executes `pip install` command.
-    - pip3 install pillow
-    - pip3 install pyTelegramBotAPI
-    - pip3 install sympy
+    - pip install pillow
+    - pip install pyTelegramBotAPI
+    - pip install sympy
     - ls
     - python3 mencionar_bot.py
 
