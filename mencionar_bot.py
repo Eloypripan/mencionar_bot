@@ -89,6 +89,22 @@ def command_start(m):
 	bot.send_message(cid, "Arrancando Mencionar_todos...\n¡Buenas! ¿En qué puedo servirle?")
 	command_help(m)
 
+"""	
+##INLINE KEYBOARD
+def welcome(m):
+    cid = m.chat.id
+    markup = types.InlineKeyboardMarkup()
+    b = types.InlineKeyboardButton("Help",callback_data='help')
+    c = types.InlineKeyboardButton("About",callback_data='amir')
+    markup.add(b,c)
+    nn = types.InlineKeyboardButton("Inline Mode", switch_inline_query='')
+    oo = types.InlineKeyboardButton("Support", url='https://telegram.me/eloypripan')
+    markup.add(nn,oo)
+    id = m.from_user.id
+    redis.sadd('memberspy',id)
+    bot.send_message(cid, "Hi \n\n Welcome To TweenRoBOT \n\n Please Choose One :)", reply_markup=markup)
+"""
+
 ##HELP
 @bot.message_handler(commands=['help'])
 def command_help(m):
@@ -153,7 +169,7 @@ def all(m):
 def lobo(m):
 	cid = m.chat.id
 	st = bot.get_chat_member(cid, m.from_user.id).status
-	if ((st == "creator" or st == "administrator" or m.from_user.username == "eloypripan") and cid in grupos):
+	if ((st == "member" or st == "creator" or st == "administrator" or m.from_user.username == "eloypripan") and cid in grupos):
 		bot.reply_to(m, grupos[cid])
 	
 ############################################
