@@ -12,7 +12,6 @@ Wercker:
 .. image:: https://app.wercker.com/status/cbef8245821f6bac385c392b6f199ad2/s/master
      : :target: https://app.wercker.com/project/byKey/cbef8245821f6bac385c392b6f199ad2
 
-[![wercker status](https://app.wercker.com/status/cbef8245821f6bac385c392b6f199ad2/s/master "wercker status")](https://app.wercker.com/project/byKey/cbef8245821f6bac385c392b6f199ad2)
 Travis:
 -------
 .. image:: https://travis-ci.com/Eloypripan/mencionar_bot.svg?branch=master
