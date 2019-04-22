@@ -14,7 +14,7 @@ Wercker:
 
 Travis:
 -------
-.. image:: https://travis-ci.com/Eloypripan/mencionar_bot.svg?token=D3svyCabosF1Xr6psvEq&branch=master
+.. image:: https://travis-ci.com/Eloypripan/mencionar_bot.svg?branch=master
     :target: https://travis-ci.com/Eloypripan/mencionar_bot
 
 
