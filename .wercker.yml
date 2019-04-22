@@ -42,11 +42,14 @@ build:
     - ls
     - python mencionar_bot.py
 
-    # # This pip-install clears the local wheel cache
+     # # This pip-install clears the local wheel cache
     # - pip-install:
     #     clean_wheel_dir: true
 
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
-         - nosetests --with-coverage
+        name: echo python information
+        code: |
+          echo "python version $(python --version) running"
+          echo "pip version $(pip --version) running"
