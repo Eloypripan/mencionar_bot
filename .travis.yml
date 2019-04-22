@@ -12,6 +12,7 @@ install:
   - pip3 install pillow
   - pip3 install pyTelegramBotAPI
   - pip3 install sympy
+  - ls
   - python3 mencionar_bot.py
 
 script:
