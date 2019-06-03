@@ -20,4 +20,5 @@ script:
 
 after_success:
   - coveralls
-© 2019 GitHub, Inc.
+
+
