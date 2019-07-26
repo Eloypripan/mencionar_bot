@@ -19,8 +19,8 @@ do
                 chmod +x mencionar_bot.py
         fi
     
-    screen -S Pingu -d -m ~/mencionar_bot/mencionar_bot.py
-    id=$(screen -ls | grep Mencion | cut -d '.' -f 1)
+    screen -S Menconador -d -m ~/mencionar_bot/mencionar_bot.py
+    id=$(screen -ls | grep Menciondor | cut -d '.' -f 1)
     date
     echo El programa se reiniciará en 55 minutos
     sleep 55m
