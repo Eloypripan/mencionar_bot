@@ -3,7 +3,7 @@ id=100
 while true
 do
         # Si hay un proceso abierto lo cerramos
-    if (($id != 100
+    if (($id != 100))
     then
         screen kill $id
     fi
