@@ -8,7 +8,7 @@ import logging
 import sympy
 import ast
 
-token_file = open("TOKEN.txt", "r") # "TOKEN.txt" tiene el token que Bot Father nos dio en la primera línea
+token_file = open("TOKENmencionador.txt", "r") # "TOKENmencionador.txt" tiene el token que Bot Father nos dio en la primera línea
 TOKEN = token_file.readline()
 token_file.close()
 
@@ -149,7 +149,7 @@ def command_id(m):
 
 
 ##MENCIONAR
-@bot.message_handler(commands=['mencionar_todos']) # Indicamos que lo siguiente va a controlar el comando '/chiste'
+@bot.message_handler(commands=['mencionar_todos']) # Indicamos que lo siguiente va a controlar el comando
 def command_mencionar_toh(m): # Definimos una función que resuleva lo que necesitemos.
 	cid = m.chat.id
 	st = bot.get_chat_member(cid, m.from_user.id).status
