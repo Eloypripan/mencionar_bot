@@ -2,7 +2,7 @@
 id=1
 while true
 do
-        # Si hay un proceso abierto lo cerramos
+    # Si hay un proceso abierto lo cerramos
     if (($id != 1))
     then
         screen kill $id
