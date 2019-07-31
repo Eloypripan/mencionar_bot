@@ -1,27 +1,28 @@
 #!/bin/bash
-id=100
+id=1
 while true
 do
         # Si hay un proceso abierto lo cerramos
-    if (($id != 100))
+    if (($id != 1))
     then
         screen kill $id
     fi
-        
         # Guardamos la hora en formato HH
         hora=$(echo 10#$(date) | cut -d ":" -f 1 | cut -d " " -f 4)
         # Si el programa se acaba de arrancar o son las 5 am se clona el github
-        if (($hora == 5 || $id == 100))
+        if (($hora == 5 || $id == 1))
         then
                 cd ~
-                rm -rf mencionar_bot
-                git clone https://github.com/Eloypripan/mencionar_bot
+                cp -r mencionar_bot /home/bots/files/
+                cd /home/bots/
+                grive
+                cp -r /home/bots/files/mencionar_bot/ ~
+                cd mencionar_bot
                 chmod +x mencionar_bot.py
         fi
-    
-    screen -S Mencionador -d -m /home/bots/mencionar_bot/mencionar_bot.py
-    id=$(screen -ls | grep Menciondor | cut -d '.' -f 1)
+    screen -S Mencionador -d -m ~/mencionar_bot/mencionar_bot.py
+    id=$(screen -ls | grep Mencionador | cut -d '.' -f 1)
     date
-    echo El programa se reiniciará en 55 minutos
-    sleep 55m
+    echo El programa se reiniciará en 1 minutos
+    sleep 1m
 done
