@@ -2,6 +2,7 @@ mencionar_bot
 --------
 
 Un divertido bot para Telegram para mecionar a todo el grupo
+Solo puede ser usado por administradores del grupo, al resto no le hace caso
 Probado para Python 3.6.X. 
 Este bot utiliza las siguientes APIs: sympy, pyTelegramBotAPI y pillow.
 
